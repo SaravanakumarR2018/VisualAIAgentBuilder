@@ -342,6 +342,7 @@ docker_build_frontend: dockerfile_build_fe clear_dockerimage ## build Frontend D
 dockerfile_build:
 	@echo 'BUILDING DOCKER IMAGE: ${DOCKERFILE}'
 	@docker build --rm \
+			--build-arg NODE_OPTIONS="$(NODE_OPTIONS)" \
 		-f ${DOCKERFILE} \
 		-t langflow:${VERSION} .
 
