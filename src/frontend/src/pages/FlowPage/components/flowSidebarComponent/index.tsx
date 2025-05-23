@@ -362,7 +362,7 @@ export function FlowSidebarComponent({ isLoading }: FlowSidebarComponentProps) {
       </SidebarContent>
       <SidebarFooter className="border-t p-4 py-3">
         <SidebarMenuButtons
-          hasStore={hasStore}
+          hasStore={false}
           customComponent={customComponent}
           addComponent={addComponent}
           isLoading={isLoading}
