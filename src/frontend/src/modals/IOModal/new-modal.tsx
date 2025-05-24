@@ -353,14 +353,6 @@ export default function IOModal({
                       <div className="text-sm">Theme</div>
                       <ThemeButtons />
                     </div>
-                    <Button
-                      onClick={LangflowButtonClick}
-                      variant="primary"
-                      className="w-full !rounded-xl shadow-lg"
-                    >
-                      <LangflowLogoColor />
-                      <div className="text-sm">Built with Langflow</div>
-                    </Button>
                   </div>
                 )}
               </div>

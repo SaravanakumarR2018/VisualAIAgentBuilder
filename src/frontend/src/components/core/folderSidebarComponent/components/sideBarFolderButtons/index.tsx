@@ -21,7 +21,7 @@ import {
   usePostUploadFolders,
 } from "@/controllers/API/queries/folders";
 import { useGetDownloadFolders } from "@/controllers/API/queries/folders/use-get-download-folders";
-import { CustomStoreButton } from "@/customization/components/custom-store-button";
+
 import {
   ENABLE_CUSTOM_PARAM,
   ENABLE_DATASTAX_LANGFLOW,
@@ -49,7 +49,7 @@ import useFileDrop from "../../hooks/use-on-file-drop";
 import { SidebarFolderSkeleton } from "../sidebarFolderSkeleton";
 import { HeaderButtons } from "./components/header-buttons";
 import { InputEditFolderName } from "./components/input-edit-folder-name";
-import { MCPServerNotice } from "./components/mcp-server-notice";
+
 import { SelectOptions } from "./components/select-options";
 
 type SideBarFoldersButtonsComponentProps = {
@@ -464,16 +464,12 @@ const SideBarFoldersButtonsComponent = ({
         </SidebarGroup>
         <div className="flex-1" />
 
-        {ENABLE_MCP_NOTICE && !isDismissedMcpDialog && (
-          <div className="p-2">
-            <MCPServerNotice handleDismissDialog={handleDismissMcpDialog} />
-          </div>
-        )}
+
       </SidebarContent>
       {ENABLE_FILE_MANAGEMENT && (
         <SidebarFooter className="border-t">
           <div className="grid w-full items-center gap-2 p-2">
-            {!ENABLE_DATASTAX_LANGFLOW && <CustomStoreButton />}
+            {/* CustomStoreButton removed as requested */}
             <SidebarMenuButton
               isActive={checkPathFiles}
               onClick={() => handleFilesClick?.()}
