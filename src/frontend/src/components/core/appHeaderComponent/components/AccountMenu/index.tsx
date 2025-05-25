@@ -109,14 +109,6 @@ export const AccountMenu = () => {
                   </HeaderMenuItemButton>
                 </div>
               )}
-              <HeaderMenuItemLink
-                newPage
-                href={ENABLE_DATASTAX_LANGFLOW ? DATASTAX_DOCS_URL : DOCS_URL}
-              >
-                <span data-testid="menu_docs_button" id="menu_docs_button">
-                  Docs
-                </span>
-              </HeaderMenuItemLink>
             </div>
 
             <div className="flex items-center justify-between px-4 py-[6.5px] text-sm">
